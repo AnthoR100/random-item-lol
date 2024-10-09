@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Fonction pour charger les données des items
     function loadItemsData() {
-        return fetch("/data/items.json")
+        return fetch("/data/data.json") // Change le chemin pour correspondre à 'data.json'
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Trouver les items correspondants
-        const matchingItems = Object.entries(itemsData).filter(([itemName, itemData]) => {
+        const matchingItems = Object.entries(itemsData).filter(([itemId, itemData]) => {
             if (!itemData.color) {
-                console.warn(`L'article ${itemName} ne contient pas de propriété 'color'. Cet article sera ignoré.`);
+                console.warn(`L'article ${itemId} ne contient pas de propriété 'color'. Cet article sera ignoré.`);
                 return false;
             }
             return itemData.color.includes(generatedColor);
@@ -77,28 +77,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Afficher jusqu'à 6 items correspondants
             for (let i = 0; i < Math.min(6, shuffledItems.length); i++) {
-                const [selectedItemName, selectedItemData] = shuffledItems[i];
+                const [selectedItemId, selectedItemData] = shuffledItems[i];
 
                 const itemContainer = document.createElement("div");
                 itemContainer.className = "item-container";
 
                 const itemImage = document.createElement("img");
                 itemImage.className = "item-image";
-                itemImage.src = selectedItemData.url;
-                itemImage.alt = selectedItemName;
+                itemImage.src = selectedItemData.image; // Utilise 'image' pour l'URL de l'image
+                itemImage.alt = selectedItemData.name;
                 itemImage.style.display = "block";
 
                 const itemName = document.createElement("div");
                 itemName.className = "item-name";
-                itemName.textContent = selectedItemName;
+                itemName.textContent = selectedItemData.name; // Affiche le nom de l'item
                 itemName.style.display = "block";
+
+                const itemPrice = document.createElement("div"); // Nouveau div pour le prix
+                itemPrice.className = "item-price";
+                itemPrice.textContent = `Prix: ${selectedItemData.gold_total} pièces d'or`; // Affiche le prix
+                itemPrice.style.display = "block";
 
                 itemContainer.appendChild(itemImage);
                 itemContainer.appendChild(itemName);
+                itemContainer.appendChild(itemPrice); // Ajoute le prix au conteneur
 
                 itemImagesContainer.appendChild(itemContainer);
 
-                console.log(`Item correspondant trouvé : ${selectedItemName}`);
+                console.log(`Item correspondant trouvé : ${selectedItemData.name}`);
             }
         } else {
             console.log("Aucun item trouvé avec la couleur générée.");
