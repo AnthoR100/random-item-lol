@@ -1,23 +1,42 @@
 import requests
-from bs4 import BeautifulSoup
+import json
 
-# Récupérer le contenu de la page
-url = "https://lolshop.gg/"
+# URL du fichier JSON contenant les données des items
+url = "https://ddragon.leagueoflegends.com/cdn/14.20.1/data/fr_FR/item.json"
 response = requests.get(url)
-soup = BeautifulSoup(response.content, 'html.parser')
 
-# Trouver la section des légendaires
-legendary_section = soup.find('h2', text='legendaries').find_next('div')
+# Vérifier si la requête a réussi
+if response.status_code == 200:
+    # Charger les données JSON
+    data = response.json()
 
-# Extraire les articles de cette section
-items = legendary_section.find_all('div', class_='Grid_gridItem__781Hl')
-item_data = {}
-for item in items:
-    name = item.get('data-item-name')
-    img = item.find('img')
-    img_src = img['src'] if img else 'Image non disponible'
-    item_data[name] = img_src
+    # Extraire les items
+    items = data.get('data', {})
+    
+    # Dictionnaire pour stocker les items qui respectent les conditions
+    filtered_items = {}
 
-# Afficher les données extraites
-for name, img_src in item_data.items():
-    print(f'"{name}": "{img_src}",')
+    for item_id, item_info in items.items():
+        name = item_info.get('name')
+        gold_total = item_info.get('gold', {}).get('total', 0)
+        maps = item_info.get('maps', {})
+
+        # Ajouter l'item uniquement si le coût total en or est supérieur à 2000 ET que la map 11 est disponible
+        if gold_total > 2000 and maps.get("11", False):
+            # Générer l'URL de l'image de l'item
+            image_url = f"https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/{item_id}.png"
+            
+            # Ajouter l'item au dictionnaire avec le nom, le coût total en or et l'image
+            filtered_items[item_id] = {
+                'name': name,
+                'gold_total': gold_total,
+                'image': image_url
+            }
+
+    # Enregistrer les données filtrées dans un fichier JSON
+    with open('data.json', 'w', encoding='utf-8') as json_file:
+        json.dump(filtered_items, json_file, ensure_ascii=False, indent=4)
+
+    print(f"{len(filtered_items)} items ont été enregistrés dans 'data.json'.")
+else:
+    print(f"Erreur lors de la récupération des données. Statut de la requête: {response.status_code}")

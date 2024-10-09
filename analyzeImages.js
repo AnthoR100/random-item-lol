@@ -1,11 +1,11 @@
-const fs = require('fs');
+const fs = require('fs'); 
 const path = require('path');
 const axios = require('axios');
 const sharp = require('sharp');
 const getColors = require('get-image-colors');
 
 // Charger les données du fichier JSON
-const itemsFilePath = path.join(__dirname, 'data', 'items.json');
+const itemsFilePath = path.join(__dirname, 'data', 'data.json');
 let itemsData;
 try {
     itemsData = require(itemsFilePath);
@@ -78,8 +78,8 @@ async function analyzeImageColors(imageUrl) {
             percentage: (count / totalPixels) * 100
         }));
 
-        // Filtrer les couleurs qui dépassent 45%
-        const dominantColors = colorPercentages.filter(entry => entry.percentage >= 40);
+        // Filtrer les couleurs qui dépassent 35%
+        const dominantColors = colorPercentages.filter(entry => entry.percentage >= 25);
 
         return dominantColors.map(entry => entry.color);
     } catch (error) {
@@ -90,17 +90,23 @@ async function analyzeImageColors(imageUrl) {
 
 // Fonction principale pour analyser toutes les images et mettre à jour le fichier JSON
 async function updateItemsWithColors() {
-    for (const itemName in itemsData) {
-        const item = itemsData[itemName];
-        if (item && item.url) {
-            console.log(`Analyse des couleurs pour ${itemName}...`);
-            const dominantColors = await analyzeImageColors(item.url);
+    for (const itemId in itemsData) {
+        const item = itemsData[itemId];
+        if (item && item.name && item.gold_total && item.gold_total > 2000) {
+            const imageUrl = `https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/${itemId}.png`;
+            console.log(`Analyse des couleurs pour ${item.name}...`);
+
+            const dominantColors = await analyzeImageColors(imageUrl);
             if (dominantColors.length > 0) {
-                // Mettre à jour la propriété 'color' avec les couleurs dominantes
-                itemsData[itemName].color = dominantColors;
-                console.log(`Couleurs principales pour ${itemName} : ${dominantColors}`);
+                // Mettre à jour l'item avec l'image et les couleurs dominantes
+                itemsData[itemId] = {
+                    ...item,
+                    image: imageUrl,
+                    color: dominantColors
+                };
+                console.log(`Couleurs principales pour ${item.name} : ${dominantColors}`);
             } else {
-                console.log(`Aucune couleur dépassant 45% pour ${itemName}`);
+                console.log(`Aucune couleur dépassant 35% pour ${item.name}`);
             }
         }
     }
