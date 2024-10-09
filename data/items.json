@@ -1,430 +1,665 @@
 {
   "Rabadon's Deathcap": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3089_mage_t3_deathcap.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000"
+    ]
   },
   "Infinity Edge": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3031_marksman_t3_infinityedge.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Bloodthirster": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3072_fighter_t3_bloodthirster.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Trinity Force": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Overlord's Bloodmail": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/7111_overlordsbloodmail.png",
-    "color": "#ff0000"
+    "color": [
+      "#9400d3"
+    ]
   },
   "Ravenous Hydra": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3074_fighter_t3_ravenoushydra.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Mercurial Scimitar": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00",
+      "#FCDC12"
+    ]
   },
   "Titanic Hydra": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3748_fighter_t3_titanichydra.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#00ff00"
+    ]
   },
   "Stridebreaker": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6631_fighter_t4_stridebreaker.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Profane Hydra": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6698_profanehydra.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Zhonya's Hourglass": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3157_mage_t3_zhonyashourglass.png",
-    "color": "#ff8000"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Guardian Angel": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3026_fighter_t3_guardianangel.png",
-    "color": "#ff8000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Yun Tal Wildarrows": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3032_yuntalwildarrows.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff0000",
+      "#FCDC12"
+    ]
   },
   "Sterak's Gage": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3053_steraks_gage.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000"
+    ]
   },
   "Blade of The Ruined King": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3153_fighter_t3_bladeoftheruinedking.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#FCDC12"
+    ]
   },
   "Essence Reaver": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3508_marksman_t3_essencereaver.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Shadowflame": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4645_shadowflame.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Death's Dance": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6333_fighter_t3_deathsdance.png",
-    "color": "#00ff00"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Jak'Sho, The Protean": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6665_tank_t4_jakshotheprotean.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#ff00ff"
+    ]
   },
   "The Collector": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6676_marksman_t3_thecollector.png",
-    "color": "#ff0000"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Serylda's Grudge": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6694_assasin_t3_seryldasgrudge.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Warmog's Armor": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3083_tank_t3_warmogs.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12",
+      "#ff8000"
+    ]
   },
   "Lich Bane": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3100_mage_t3_lichbane.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Banshee's Veil": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Maw of Malmortius": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3156_fighter_t3_mawofmalmortius.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Spear of Shojin": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3161_fighter_t3_spearofshojin.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Zephyr": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3172_zephyr.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Riftmaker": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4633_mage_t4_riftmaker.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Sundered Sky": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6610_sunderedsky.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Kraken Slayer": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6672_marksman_t4_behemothslayer.png",
-    "color": "#00ff00"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Mortal Reminder": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
-    "color": "#00ff00"
+    "color": [
+      "#FCDC12",
+      "#ff8000"
+    ]
   },
   "Lord Dominik's Regards": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3036_marksman_t3_dominikregards.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Black Cleaver": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3071_fighter_t3_blackcleaver.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Experimental Hexplate": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3073_hexaegis.png",
-    "color": "#ff0000"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Heartsteel": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3084_tank_t4_heartsteel.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff8000",
+      "#00ff00"
+    ]
   },
   "Nashor's Tooth": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3115_mage_t3_nashorstooth.png",
-    "color": "#0000ff"
+    "color": [
+      "#9400d3"
+    ]
   },
   "Guinsoo's Rageblade": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3124_marksman_t3_guinsoosrageblade.png",
-    "color": "#ffff00"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Void Staff": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3135_mage_t3_voidstaff.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Hullbreaker": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3181_hullbreaker.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Terminus": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3302_terminus.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Cosmic Drive": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4629_mage_t3_cosmicdrive.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Silvermere Dawn": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6035_fighter_t3_silvermeredawn.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Liandry's Torment": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6653_mage_t4_liandrysanguish.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Immortal Shieldbow": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6673_marksman_t4_crimsonshieldbow.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Axiom Arc": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6696_axiomarc.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Hubris": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6697_hubris.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Kaenic Rookern": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2504_kaenicrookern.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000"
+    ]
   },
   "Archangel's Staff": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3003_mage_t3_archangelstaff.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Manamune": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3004_marksman_t3_manamune.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Spirit Visage": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3065_tank_t3_spiritvisage.png",
-    "color": "#0000ff"
+    "color": [
+      "#00ff00",
+      "#FCDC12"
+    ]
   },
   "Statikk Shiv": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3087_statikk_shiv.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Dead Man's Plate": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3742_tank_t3_deadmansplate.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Stormsurge": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4646_stormsurge.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Luden's Companion": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6655_casterscompanion.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Voltaic Cyclosword": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6699_voltaiccyclosword.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000"
+    ]
   },
   "Cryptbloom": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3137_cryptbloom.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Unending Despair": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2502_unendingdespair.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Blackfire Torch": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2503_blackfiretorch64.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#ff00ff"
+    ]
   },
   "Wit's End": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3091_fighter_t3_witsend.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Edge of Night": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3814_assassin_t3_edgeofnight.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#ff00ff"
+    ]
   },
   "Force of Nature": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4401_tank_t3_forceofnature.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Chempunk Chainsword": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6609_fighter_t3_chempunkchainsword.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Hollow Radiance": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6664_hollowradiance.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Eclipse": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6692_assassin_t4_eclipse.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#0000ff"
+    ]
   },
   "Sunfire Aegis": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3068_tank_t4_sunfireaegis.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Thornmail": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3075_tank_t3_thornmail.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12",
+      "#ff8000"
+    ]
   },
   "Malignance": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3118_malignance.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Youmuu's Ghostblade": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3142_assassin_t3_youmuusghostblade.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#ff00ff"
+    ]
   },
   "Randuin's Omen": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3143_tank_t3_randuinsomen.png",
-    "color": "#ff8000"
+    "color": [
+      "#FCDC12",
+      "#0000ff"
+    ]
   },
   "Horizon Focus": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Dawncore": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6621_dawncore.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Opportunity": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6701_opportunity.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Phantom Dancer": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3046_marksman_t3_phantomdancer.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#00ff00"
+    ]
   },
   "Runaan's Hurricane": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3085_marksman_t3_runaans.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Rapid Firecannon": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3094_marksman_t3_rapidfirehandcannon.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Rylai's Crystal Scepter": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3116_mage_t3_rylajscrystalscepter.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#FCDC12"
+    ]
   },
   "Hextech Rocketbelt": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3152_mage_t4_hextechrocketbelt.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff8000",
+      "#FCDC12"
+    ]
   },
   "Umbral Glaive": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3179_assassin_t3_umbralglaive.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Rod of Ages": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6657_mage_t4_rodofages.png",
-    "color": "#00ff00"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Iceborn Gauntlet": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6662_tank_t3_iceborngauntlet.png",
-    "color": "#ff00ff"
+    "color": [
+      "#ff00ff",
+      "#0000ff"
+    ]
   },
   "Navori Flickerblade": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6675_navoriflickerblade.png",
-    "color": "#0000ff"
-  },
-  "Trailblazer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3002_trailblazer.png",
-    "color": "#ff8000"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Frozen Heart": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3110_tank_t3_frozenheart.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#FCDC12"
+    ]
   },
   "Serpent's Fang": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6695_assassin_t3_serpentsfang.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Winter's Approach": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3119_wintersapproach.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Fimbulwinter": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3121_fimbulwinter.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Redemption": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3107_enchanter_t3_redemption.png",
-    "color": "#ff8000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Mikael's Blessing": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3222_enchanter_t3_mikaelsblessing.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00",
+      "#FCDC12"
+    ]
   },
   "Ardent Censer": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3504_enchanter_t3_ardentcenser.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   },
   "Imperial Mandate": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4005_enchanter_t4_imperialmandate.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000"
+    ]
   },
   "Vigilant Wardstone": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4643_enchanter_t3_vigilantsightstone.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Staff of Flowing Water": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3744_enchanter_t3_staffofflowingwater.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Abyssal Mask": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/8020_tank_t3_abyssalmask.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#00ff00"
+    ]
   },
   "Shurelya's Battlesong": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2065_tank_t4_shurelyasbattlesong.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff8000"
+    ]
   },
   "Zeke's Convergence": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3050_enchanter_t3_zekesconvergence.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff",
+      "#FCDC12"
+    ]
   },
   "Knight's Vow": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3109_tank_t3_knightsvow.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Morellonomicon": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3165_mage_t3_morellonomicon.png",
-    "color": "#0000ff"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Locket of the Iron Solari": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3190_enchanter_t4_locketofironsolari.png",
-    "color": "#ffff00"
+    "color": [
+      "#FCDC12",
+      "#ff8000"
+    ]
   },
   "Moonstone Renewer": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png",
-    "color": "#0000ff"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Echoes of Helia": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6620_echoes_of_helia.png",
-    "color": "#00ff00"
+    "color": [
+      "#00ff00"
+    ]
   },
   "Chemtech Putrifier": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3011_enchanter_t3_chemtechfumigator.png",
-    "color": "#ffff00"
+    "color": [
+      "#9400d3"
+    ]
   },
   "Mejai's Soulstealer": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3041_mage_t2_mejaissoulstealer.png",
-    "color": "#ff8000"
+    "color": [
+      "#FCDC12",
+      "#0000ff"
+    ]
   },
   "Celestial Opposition": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3869_celestialopposition.png",
-    "color": "#ff0000"
+    "color": [
+      "#FCDC12"
+    ]
   },
   "Dream Maker": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3870_dreammaker.png",
-    "color": "#ff8000"
+    "color": [
+      "#0000ff"
+    ]
   },
   "Zaz'Zak's Realmspike": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3871_zazzaksrealmspike.png",
-    "color": "#0000ff"
-  },
-  "Solstice Sleigh": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3876_solticesleigh.png",
-    "color": "#0000ff"
+    "color": [
+      "#ff00ff"
+    ]
   },
   "Bloodsong": {
     "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3877_bloodsong.png",
-    "color": "#ff0000"
+    "color": [
+      "#ff0000",
+      "#ff8000"
+    ]
   }
 }

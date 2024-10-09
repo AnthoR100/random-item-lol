@@ -16,7 +16,7 @@ try {
 
 // Couleurs primaires et secondaires
 const primaryColors = ['#ff0000', '#00ff00', '#0000ff']; // Rouge, Vert, Bleu
-const secondaryColors = ['#ffff00', '#ff8000', '#ff00ff']; // Jaune, orange, Magenta
+const secondaryColors = ['#FCDC12', '#ff8000', '#ff00ff']; // Jaune, orange, Magenta
 const combinedColors = primaryColors.concat(secondaryColors); // Combiner les couleurs primaires et secondaires
 
 // Fonction pour calculer la distance entre deux couleurs RGB
@@ -43,6 +43,11 @@ function findClosestColor(color, colorArray) {
 // Fonction pour télécharger l'image et analyser les couleurs
 async function analyzeImageColors(imageUrl) {
     try {
+        // Vérifier si l'URL est valide
+        if (typeof imageUrl !== 'string' || !/^https?:\/\/.+/.test(imageUrl)) {
+            throw new Error("URL invalide");
+        }
+
         const response = await axios({
             url: imageUrl,
             responseType: 'arraybuffer'
@@ -53,18 +58,33 @@ async function analyzeImageColors(imageUrl) {
         // Convertir l'image en PNG
         const pngBuffer = await sharp(imageBuffer).png().toBuffer();
 
+        // Obtenir les couleurs principales de l'image
         const colors = await getColors(pngBuffer, 'image/png');
         const hexColors = colors.map(color => color.hex());
 
-        // Trouver la couleur la plus proche parmi les couleurs primaires et secondaires
-        const closestColor = hexColors
-            .map(color => findClosestColor(color, combinedColors))
-            .find(color => primaryColors.includes(color) || secondaryColors.includes(color));
+        // Compter la fréquence de chaque couleur
+        const colorFrequencies = hexColors.reduce((acc, color) => {
+            const closestColor = findClosestColor(color, combinedColors);
+            if (closestColor) {
+                acc[closestColor] = (acc[closestColor] || 0) + 1;
+            }
+            return acc;
+        }, {});
 
-        return closestColor || null;
+        // Calculer le pourcentage de chaque couleur
+        const totalPixels = hexColors.length;
+        const colorPercentages = Object.entries(colorFrequencies).map(([color, count]) => ({
+            color,
+            percentage: (count / totalPixels) * 100
+        }));
+
+        // Filtrer les couleurs qui dépassent 45%
+        const dominantColors = colorPercentages.filter(entry => entry.percentage >= 40);
+
+        return dominantColors.map(entry => entry.color);
     } catch (error) {
         console.error(`Erreur lors de l'analyse des couleurs de l'image (${imageUrl}): ${error.message}`);
-        return null;
+        return [];
     }
 }
 
@@ -72,14 +92,15 @@ async function analyzeImageColors(imageUrl) {
 async function updateItemsWithColors() {
     for (const itemName in itemsData) {
         const item = itemsData[itemName];
-        if (item) {
+        if (item && item.url) {
             console.log(`Analyse des couleurs pour ${itemName}...`);
-            const color = await analyzeImageColors(item);
-            if (color) {
-                itemsData[itemName] = { url: item, color: color };
-                console.log(`Couleur principale pour ${itemName} : ${color}`);
+            const dominantColors = await analyzeImageColors(item.url);
+            if (dominantColors.length > 0) {
+                // Mettre à jour la propriété 'color' avec les couleurs dominantes
+                itemsData[itemName].color = dominantColors;
+                console.log(`Couleurs principales pour ${itemName} : ${dominantColors}`);
             } else {
-                console.log(`Aucune couleur extraite pour ${itemName}`);
+                console.log(`Aucune couleur dépassant 45% pour ${itemName}`);
             }
         }
     }

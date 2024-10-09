@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Couleurs primaires et secondaires
     const primaryColors = ['#ff0000', '#00ff00', '#0000ff']; // Rouge, Vert, Bleu
-    const secondaryColors = ['#ffff00', '#ff8000', '#ff00ff']; // Jaune, orange, Magenta
+    const secondaryColors = ['#FCDC12', '#ff8000', '#ff00ff']; // Jaune, orange, Magenta
     const combinedColors = primaryColors.concat(secondaryColors); // Combiner les couleurs primaires et secondaires
 
     // Cacher le deuxième bouton initialement
