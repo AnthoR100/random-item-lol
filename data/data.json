@@ -10,7 +10,11 @@
   "2501": {
     "name": "Armure sanguine",
     "gold_total": 3300,
-    "image": "https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/2501.png"
+    "image": "https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/2501.png",
+    "color": [
+      "#8B4513",
+      "#800080"
+    ]
   },
   "2502": {
     "name": "Désespoir infini",
@@ -318,7 +322,10 @@
   "3115": {
     "name": "Dent de Nashor",
     "gold_total": 3000,
-    "image": "https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/3115.png"
+    "image": "https://ddragon.leagueoflegends.com/cdn/14.20.1/img/item/3115.png",
+    "color": [
+      "#800080"
+    ]
   },
   "3116": {
     "name": "Sceptre de Rylai",

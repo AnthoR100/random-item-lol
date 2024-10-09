@@ -79,7 +79,7 @@ async function analyzeImageColors(imageUrl) {
         }));
 
         // Filtrer les couleurs qui dépassent 35%
-        const dominantColors = colorPercentages.filter(entry => entry.percentage >= 35);
+        const dominantColors = colorPercentages.filter(entry => entry.percentage >= 25);
 
         return dominantColors.map(entry => entry.color);
     } catch (error) {
