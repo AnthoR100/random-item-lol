@@ -19,9 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
         purple: '#ff00ff'
     };
 
+    // URL de l'API
+    const API_URL = process.env.NODE_ENV === 'production' 
+        ? '/.netlify/functions/api'
+        : '/data/items.json';
+
     // Charger les items depuis le serveur
-    fetch('/data/items.json')
-        .then(response => response.json())
+    fetch(API_URL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erreur réseau');
+            }
+            return response.json();
+        })
         .then(data => {
             // Transformer les données en tableau
             items = Object.entries(data).map(([id, item]) => ({
@@ -36,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
             console.log('Items chargés:', items.length);
         })
-        .catch(error => console.error('Erreur:', error));
+        .catch(error => {
+            console.error('Erreur:', error);
+            itemsContainer.innerHTML = '<div class="error-message">Erreur lors du chargement des items</div>';
+        });
 
     // Générer une couleur aléatoire
     generateButton.addEventListener('click', () => {

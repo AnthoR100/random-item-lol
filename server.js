@@ -4,8 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs').promises;
 const app = express();
-const PORT = 3000;
-const host = 'localhost';
+const PORT = process.env.PORT || 3000;
 
 // Middleware to handle CORS
 app.use(cors());
@@ -15,7 +14,7 @@ app.use(express.static('public'));
 app.use('/data', express.static('data'));
 
 // Route pour obtenir tous les items avec leurs couleurs
-app.get('/items', async (req, res) => {
+app.get('/api/items', async (req, res) => {
     try {
         const itemsData = await fs.readFile(path.join(__dirname, 'data', 'items.json'), 'utf8');
         const items = JSON.parse(itemsData);
@@ -44,15 +43,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Route de test pour vérifier que le serveur fonctionne
-app.get('/test', (req, res) => {
-    res.send('Le serveur fonctionne correctement !');
+// Gestion des erreurs 404
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Démarrer le serveur
-app.listen(PORT, () => {
-    console.log(`Serveur démarré sur http://localhost:${PORT}`);
-    console.log('Pour accéder au serveur, utilisez l\'une des adresses suivantes :');
-    console.log(`- http://localhost:${PORT}`);
-    console.log(`- http://127.0.0.1:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Serveur démarré sur http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
