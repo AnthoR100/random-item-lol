@@ -1,665 +1,1136 @@
 {
-  "Rabadon's Deathcap": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3089_mage_t3_deathcap.png",
-    "color": [
-      "#ff0000"
-    ]
-  },
-  "Infinity Edge": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3031_marksman_t3_infinityedge.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Bloodthirster": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3072_fighter_t3_bloodthirster.png",
+  "2065": {
+    "name": "Chant de guerre de Shurelya",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2065.png",
     "color": [
       "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Trinity Force": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
-    "color": [
       "#FCDC12"
     ]
   },
-  "Overlord's Bloodmail": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/7111_overlordsbloodmail.png",
+  "2501": {
+    "name": "Armure sanguine",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2501.png",
     "color": [
-      "#9400d3"
+      "#ff0000",
+      "#0000ff"
     ]
   },
-  "Ravenous Hydra": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3074_fighter_t3_ravenoushydra.png",
+  "2502": {
+    "name": "Désespoir infini",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2502.png",
     "color": [
-      "#ff8000"
+      "#0000ff",
+      "#ff00ff",
+      "#00ffff"
     ]
   },
-  "Mercurial Scimitar": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
+  "2503": {
+    "name": "Torche noire",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2503.png",
+    "color": [
+      "#ff00ff"
+    ]
+  },
+  "2504": {
+    "name": "Rookern kaénique",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2504.png",
     "color": [
       "#00ff00",
-      "#FCDC12"
+      "#00ffff",
+      "#ff0000"
     ]
   },
-  "Titanic Hydra": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3748_fighter_t3_titanichydra.png",
+  "3002": {
+    "name": "Sac de l'explorateur",
+    "gold_total": 2400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3002.png",
     "color": [
-      "#0000ff",
+      "#ff0000",
       "#00ff00"
     ]
   },
-  "Stridebreaker": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6631_fighter_t4_stridebreaker.png",
+  "3003": {
+    "name": "Bâton de l'archange",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3003.png",
     "color": [
-      "#0000ff"
+      "#00ffff",
+      "#0000ff",
+      "#ff0000"
     ]
   },
-  "Profane Hydra": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6698_profanehydra.png",
+  "3004": {
+    "name": "Manamune",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3004.png",
     "color": [
-      "#0000ff"
+      "#00ffff",
+      "#ff0000"
     ]
   },
-  "Zhonya's Hourglass": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3157_mage_t3_zhonyashourglass.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Guardian Angel": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3026_fighter_t3_guardianangel.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Yun Tal Wildarrows": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3032_yuntalwildarrows.png",
-    "color": [
-      "#ff0000",
-      "#FCDC12"
-    ]
-  },
-  "Sterak's Gage": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3053_steraks_gage.png",
+  "3026": {
+    "name": "Ange gardien",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3026.png",
     "color": [
       "#ff0000"
     ]
   },
-  "Blade of The Ruined King": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3153_fighter_t3_bladeoftheruinedking.png",
-    "color": [
-      "#0000ff",
-      "#FCDC12"
-    ]
-  },
-  "Essence Reaver": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3508_marksman_t3_essencereaver.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Shadowflame": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4645_shadowflame.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Death's Dance": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6333_fighter_t3_deathsdance.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Jak'Sho, The Protean": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6665_tank_t4_jakshotheprotean.png",
-    "color": [
-      "#0000ff",
-      "#ff00ff"
-    ]
-  },
-  "The Collector": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6676_marksman_t3_thecollector.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Serylda's Grudge": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6694_assasin_t3_seryldasgrudge.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Warmog's Armor": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3083_tank_t3_warmogs.png",
-    "color": [
-      "#FCDC12",
-      "#ff8000"
-    ]
-  },
-  "Lich Bane": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3100_mage_t3_lichbane.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Banshee's Veil": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Maw of Malmortius": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3156_fighter_t3_mawofmalmortius.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Spear of Shojin": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3161_fighter_t3_spearofshojin.png",
-    "color": [
-      "#00ff00"
-    ]
-  },
-  "Zephyr": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3172_zephyr.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Riftmaker": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4633_mage_t4_riftmaker.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Sundered Sky": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6610_sunderedsky.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Kraken Slayer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6672_marksman_t4_behemothslayer.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Mortal Reminder": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
-    "color": [
-      "#FCDC12",
-      "#ff8000"
-    ]
-  },
-  "Lord Dominik's Regards": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3036_marksman_t3_dominikregards.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Black Cleaver": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3071_fighter_t3_blackcleaver.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Experimental Hexplate": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3073_hexaegis.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Heartsteel": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3084_tank_t4_heartsteel.png",
-    "color": [
-      "#ff8000",
-      "#00ff00"
-    ]
-  },
-  "Nashor's Tooth": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3115_mage_t3_nashorstooth.png",
-    "color": [
-      "#9400d3"
-    ]
-  },
-  "Guinsoo's Rageblade": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3124_marksman_t3_guinsoosrageblade.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Void Staff": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3135_mage_t3_voidstaff.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Hullbreaker": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3181_hullbreaker.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Terminus": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3302_terminus.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Cosmic Drive": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4629_mage_t3_cosmicdrive.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Silvermere Dawn": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6035_fighter_t3_silvermeredawn.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Liandry's Torment": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6653_mage_t4_liandrysanguish.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Immortal Shieldbow": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6673_marksman_t4_crimsonshieldbow.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Axiom Arc": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6696_axiomarc.png",
-    "color": [
-      "#00ff00"
-    ]
-  },
-  "Hubris": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6697_hubris.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Kaenic Rookern": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2504_kaenicrookern.png",
+  "3031": {
+    "name": "Lame d'infini",
+    "gold_total": 3450,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3031.png",
     "color": [
       "#ff0000"
     ]
   },
-  "Archangel's Staff": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3003_mage_t3_archangelstaff.png",
+  "3032": {
+    "name": "Flèches des Yun Tal",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3032.png",
     "color": [
+      "#ff0000",
+      "#FCDC12"
+    ]
+  },
+  "3033": {
+    "name": "Rappel mortel",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3033.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "3036": {
+    "name": "Salutations de Dominik",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3036.png",
+    "color": [
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "3040": {
+    "name": "Étreinte du séraphin",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3040.png",
+    "color": [
+      "#ff0000",
+      "#00ffff",
+      "#00ff00"
+    ]
+  },
+  "3042": {
+    "name": "Muramana",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3042.png",
+    "color": [
+      "#0000ff",
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "3046": {
+    "name": "Danseur fantôme",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3046.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "3050": {
+    "name": "Convergence de Zeke",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3050.png",
+    "color": [
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "3053": {
+    "name": "Gage de Sterak",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3053.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3065": {
+    "name": "Visage spirituel",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3065.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "3068": {
+    "name": "Égide solaire",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3068.png",
+    "color": [
+      "#ff0000",
+      "#00ff00"
+    ]
+  },
+  "3071": {
+    "name": "Couperet noir",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3071.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3072": {
+    "name": "Soif-de-sang",
+    "gold_total": 3400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3072.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3073": {
+    "name": "Hexplaque expérimentale",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3073.png",
+    "color": [
+      "#FCDC12",
+      "#00ffff",
+      "#ff0000",
       "#0000ff"
     ]
   },
-  "Manamune": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3004_marksman_t3_manamune.png",
+  "3074": {
+    "name": "Hydre vorace",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3074.png",
     "color": [
-      "#0000ff"
+      "#ff0000"
     ]
   },
-  "Spirit Visage": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3065_tank_t3_spiritvisage.png",
+  "3075": {
+    "name": "Cotte épineuse",
+    "gold_total": 2450,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3075.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3078": {
+    "name": "Force de la trinité",
+    "gold_total": 3333,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3078.png",
+    "color": [
+      "#FCDC12",
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "3083": {
+    "name": "Armure de Warmog",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3083.png",
+    "color": [
+      "#FCDC12",
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "3084": {
+    "name": "Cœuracier",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3084.png",
+    "color": [
+      "#ff0000",
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "3085": {
+    "name": "Ouragan de Runaan",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3085.png",
+    "color": [
+      "#ff0000",
+      "#FCDC12"
+    ]
+  },
+  "3087": {
+    "name": "Poignard de Statikk",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3087.png",
     "color": [
       "#00ff00",
-      "#FCDC12"
+      "#00ffff"
     ]
   },
-  "Statikk Shiv": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3087_statikk_shiv.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Dead Man's Plate": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3742_tank_t3_deadmansplate.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Stormsurge": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4646_stormsurge.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Luden's Companion": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6655_casterscompanion.png",
-    "color": [
-      "#00ff00"
-    ]
-  },
-  "Voltaic Cyclosword": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6699_voltaiccyclosword.png",
-    "color": [
-      "#ff0000"
-    ]
-  },
-  "Cryptbloom": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3137_cryptbloom.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Unending Despair": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2502_unendingdespair.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Blackfire Torch": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2503_blackfiretorch64.png",
-    "color": [
-      "#0000ff",
-      "#ff00ff"
-    ]
-  },
-  "Wit's End": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3091_fighter_t3_witsend.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Edge of Night": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3814_assassin_t3_edgeofnight.png",
-    "color": [
-      "#0000ff",
-      "#ff00ff"
-    ]
-  },
-  "Force of Nature": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4401_tank_t3_forceofnature.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Chempunk Chainsword": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6609_fighter_t3_chempunkchainsword.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Hollow Radiance": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6664_hollowradiance.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Eclipse": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6692_assassin_t4_eclipse.png",
+  "3089": {
+    "name": "Coiffe de Rabadon",
+    "gold_total": 3600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3089.png",
     "color": [
       "#ff0000",
-      "#0000ff"
-    ]
-  },
-  "Sunfire Aegis": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3068_tank_t4_sunfireaegis.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Thornmail": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3075_tank_t3_thornmail.png",
-    "color": [
-      "#FCDC12",
-      "#ff8000"
-    ]
-  },
-  "Malignance": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3118_malignance.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Youmuu's Ghostblade": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3142_assassin_t3_youmuusghostblade.png",
-    "color": [
       "#0000ff",
-      "#ff00ff"
+      "#00ffff"
     ]
   },
-  "Randuin's Omen": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3143_tank_t3_randuinsomen.png",
-    "color": [
-      "#FCDC12",
-      "#0000ff"
-    ]
-  },
-  "Horizon Focus": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Dawncore": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6621_dawncore.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Opportunity": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6701_opportunity.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Phantom Dancer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3046_marksman_t3_phantomdancer.png",
-    "color": [
-      "#0000ff",
-      "#00ff00"
-    ]
-  },
-  "Runaan's Hurricane": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3085_marksman_t3_runaans.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Rapid Firecannon": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3094_marksman_t3_rapidfirehandcannon.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Rylai's Crystal Scepter": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3116_mage_t3_rylajscrystalscepter.png",
-    "color": [
-      "#0000ff",
-      "#FCDC12"
-    ]
-  },
-  "Hextech Rocketbelt": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3152_mage_t4_hextechrocketbelt.png",
-    "color": [
-      "#ff8000",
-      "#FCDC12"
-    ]
-  },
-  "Umbral Glaive": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3179_assassin_t3_umbralglaive.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Rod of Ages": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6657_mage_t4_rodofages.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Iceborn Gauntlet": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6662_tank_t3_iceborngauntlet.png",
+  "3091": {
+    "name": "Au bout du rouleau",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3091.png",
     "color": [
       "#ff00ff",
-      "#0000ff"
-    ]
-  },
-  "Navori Flickerblade": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6675_navoriflickerblade.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Frozen Heart": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3110_tank_t3_frozenheart.png",
-    "color": [
+      "#00ffff",
       "#0000ff",
-      "#FCDC12"
+      "#ff0000"
     ]
   },
-  "Serpent's Fang": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6695_assassin_t3_serpentsfang.png",
-    "color": [
-      "#00ff00"
-    ]
-  },
-  "Winter's Approach": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3119_wintersapproach.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Fimbulwinter": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3121_fimbulwinter.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Redemption": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3107_enchanter_t3_redemption.png",
-    "color": [
-      "#ff8000"
-    ]
-  },
-  "Mikael's Blessing": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3222_enchanter_t3_mikaelsblessing.png",
-    "color": [
-      "#00ff00",
-      "#FCDC12"
-    ]
-  },
-  "Ardent Censer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3504_enchanter_t3_ardentcenser.png",
-    "color": [
-      "#ff0000",
-      "#ff8000"
-    ]
-  },
-  "Imperial Mandate": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4005_enchanter_t4_imperialmandate.png",
+  "3094": {
+    "name": "Canon ultrarapide",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3094.png",
     "color": [
       "#ff0000"
     ]
   },
-  "Vigilant Wardstone": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/4643_enchanter_t3_vigilantsightstone.png",
+  "3100": {
+    "name": "Fléau de liche",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3100.png",
     "color": [
-      "#00ff00"
+      "#ff0000",
+      "#FCDC12"
     ]
   },
-  "Staff of Flowing Water": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3744_enchanter_t3_staffofflowingwater.png",
+  "3102": {
+    "name": "Voile de la banshee",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3102.png",
     "color": [
-      "#0000ff"
-    ]
-  },
-  "Abyssal Mask": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/8020_tank_t3_abyssalmask.png",
-    "color": [
+      "#ff0000",
       "#0000ff",
-      "#00ff00"
+      "#00ffff"
     ]
   },
-  "Shurelya's Battlesong": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/2065_tank_t4_shurelyasbattlesong.png",
+  "3107": {
+    "name": "Rédemption",
+    "gold_total": 2300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3107.png",
     "color": [
-      "#ff8000"
+      "#ff0000"
     ]
   },
-  "Zeke's Convergence": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3050_enchanter_t3_zekesconvergence.png",
+  "3109": {
+    "name": "Vœu du chevalier",
+    "gold_total": 2300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3109.png",
     "color": [
-      "#0000ff",
-      "#FCDC12"
+      "#00ffff"
     ]
   },
-  "Knight's Vow": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3109_tank_t3_knightsvow.png",
+  "3110": {
+    "name": "Cœur gelé",
+    "gold_total": 2500,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3110.png",
     "color": [
-      "#00ff00"
+      "#00ffff"
     ]
   },
-  "Morellonomicon": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3165_mage_t3_morellonomicon.png",
+  "3115": {
+    "name": "Dent de Nashor",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3115.png",
     "color": [
-      "#0000ff"
-    ]
-  },
-  "Locket of the Iron Solari": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3190_enchanter_t4_locketofironsolari.png",
-    "color": [
-      "#FCDC12",
-      "#ff8000"
-    ]
-  },
-  "Moonstone Renewer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Echoes of Helia": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/6620_echoes_of_helia.png",
-    "color": [
-      "#00ff00"
-    ]
-  },
-  "Chemtech Putrifier": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3011_enchanter_t3_chemtechfumigator.png",
-    "color": [
-      "#9400d3"
-    ]
-  },
-  "Mejai's Soulstealer": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3041_mage_t2_mejaissoulstealer.png",
-    "color": [
-      "#FCDC12",
-      "#0000ff"
-    ]
-  },
-  "Celestial Opposition": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3869_celestialopposition.png",
-    "color": [
-      "#FCDC12"
-    ]
-  },
-  "Dream Maker": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3870_dreammaker.png",
-    "color": [
-      "#0000ff"
-    ]
-  },
-  "Zaz'Zak's Realmspike": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3871_zazzaksrealmspike.png",
-    "color": [
+      "#ff0000",
       "#ff00ff"
     ]
   },
-  "Bloodsong": {
-    "url": "https://raw.communitydragon.org/pbe/game/assets/items/icons2d/3877_bloodsong.png",
+  "3116": {
+    "name": "Sceptre de Rylai",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3116.png",
+    "color": [
+      "#00ffff",
+      "#0000ff",
+      "#FCDC12",
+      "#ff0000"
+    ]
+  },
+  "3118": {
+    "name": "Malfaisance",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3118.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3119": {
+    "name": "Approche de l'hiver",
+    "gold_total": 2400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3119.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "3121": {
+    "name": "Fimbulvetr",
+    "gold_total": 2400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3121.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "3124": {
+    "name": "Lame enragée de Guinsoo",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3124.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3135": {
+    "name": "Bâton du vide",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3135.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "3137": {
+    "name": "Fleur de crypte",
+    "gold_total": 2850,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3137.png",
+    "color": [
+      "#0000ff",
+      "#00ff00",
+      "#ff00ff"
+    ]
+  },
+  "3139": {
+    "name": "Cimeterre mercuriel",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3139.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "3142": {
+    "name": "Lame spectre de Youmuu",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3142.png",
+    "color": [
+      "#0000ff"
+    ]
+  },
+  "3143": {
+    "name": "Présage de Randuin",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3143.png",
     "color": [
       "#ff0000",
-      "#ff8000"
+      "#0000ff"
+    ]
+  },
+  "3152": {
+    "name": "Ceinture-roquette Hextech",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3152.png",
+    "color": [
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "3153": {
+    "name": "Lame du roi déchu",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3153.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "3156": {
+    "name": "Gueule de Malmortius",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3156.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3157": {
+    "name": "Sablier de Zhonya",
+    "gold_total": 3250,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3157.png",
+    "color": [
+      "#0000ff",
+      "#FCDC12",
+      "#00ffff"
+    ]
+  },
+  "3161": {
+    "name": "Lance de Shojin",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3161.png",
+    "color": [
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "3165": {
+    "name": "Morellonomicon",
+    "gold_total": 2950,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3165.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "3179": {
+    "name": "Glaive d'ombre",
+    "gold_total": 2500,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3179.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "3181": {
+    "name": "Brise-coques",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3181.png",
+    "color": [
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "3190": {
+    "name": "Médaillon de l'Iron Solari",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3190.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3222": {
+    "name": "Bénédiction de Mikael",
+    "gold_total": 2300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3222.png",
+    "color": [
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "3302": {
+    "name": "Terminus",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3302.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "3504": {
+    "name": "Encensoir ardent",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3504.png",
+    "color": [
+      "#ff0000",
+      "#00ff00"
+    ]
+  },
+  "3508": {
+    "name": "Faux spectrale",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3508.png",
+    "color": [
+      "#00ffff",
+      "#00ff00"
+    ]
+  },
+  "3742": {
+    "name": "Plaque du mort",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3742.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "3748": {
+    "name": "Hydre titanesque",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3748.png",
+    "color": [
+      "#00ffff",
+      "#00ff00"
+    ]
+  },
+  "3814": {
+    "name": "Manteau de la nuit",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3814.png",
+    "color": [
+      "#0000ff"
+    ]
+  },
+  "4005": {
+    "name": "Mandat impérial",
+    "gold_total": 2250,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4005.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "4401": {
+    "name": "Force de la nature",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4401.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "4628": {
+    "name": "Concentration lointaine",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4628.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "4629": {
+    "name": "Volonté cosmique",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4629.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "4633": {
+    "name": "Créateur de failles",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4633.png",
+    "color": [
+      "#ff0000",
+      "#0000ff"
+    ]
+  },
+  "4636": {
+    "name": "Moissonneur nocturne",
+    "gold_total": 2765,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4636.png",
+    "color": [
+      "#00ff00",
+      "#0000ff",
+      "#ff0000"
+    ]
+  },
+  "4637": {
+    "name": "Étreinte démoniaque",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4637.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "4643": {
+    "name": "Pierre de balise vigilante",
+    "gold_total": 2300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4643.png",
+    "color": [
+      "#00ff00",
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "4645": {
+    "name": "Flamme-ombre",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4645.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "4646": {
+    "name": "Onde orageuse",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/4646.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "6333": {
+    "name": "Danse de la mort",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6333.png",
+    "color": [
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "6609": {
+    "name": "Épée dentelée chimico-punk",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6609.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "6610": {
+    "name": "Ciel éventré",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6610.png",
+    "color": [
+      "#ff0000",
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "6616": {
+    "name": "Bâton des flots",
+    "gold_total": 2250,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6616.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "6617": {
+    "name": "Régénérateur de pierre de lune",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6617.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "6620": {
+    "name": "Échos d'Helia",
+    "gold_total": 2200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6620.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "6621": {
+    "name": "Cœur de l'aube",
+    "gold_total": 2500,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6621.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "6631": {
+    "name": "Estropieur",
+    "gold_total": 3300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6631.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "6653": {
+    "name": "Tourment de Liandry",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6653.png",
+    "color": [
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "6655": {
+    "name": "Compagnon de Luden",
+    "gold_total": 2850,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6655.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "6657": {
+    "name": "Bâton séculaire",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6657.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "6662": {
+    "name": "Gantelet givrant",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6662.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "6664": {
+    "name": "Rayonnement du vide",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6664.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "6665": {
+    "name": "Jak'Sho, le Protéiforme",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6665.png",
+    "color": [
+      "#0000ff",
+      "#ff00ff"
+    ]
+  },
+  "6672": {
+    "name": "Tueur de krakens",
+    "gold_total": 3100,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6672.png",
+    "color": [
+      "#ff0000",
+      "#00ff00"
+    ]
+  },
+  "6673": {
+    "name": "Arc-bouclier immortel",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6673.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "6675": {
+    "name": "Tremblelame navori",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6675.png",
+    "color": [
+      "#00ffff",
+      "#0000ff",
+      "#ff0000"
+    ]
+  },
+  "6676": {
+    "name": "Percepteur",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6676.png",
+    "color": [
+      "#00ffff",
+      "#FCDC12"
+    ]
+  },
+  "6692": {
+    "name": "Éclipse",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6692.png",
+    "color": [
+      "#00ffff",
+      "#0000ff",
+      "#ff0000"
+    ]
+  },
+  "6693": {
+    "name": "Griffes du rôdeur",
+    "gold_total": 2850,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6693.png",
+    "color": [
+      "#00ff00",
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "6694": {
+    "name": "Rancune de Serylda",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6694.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "6695": {
+    "name": "Crochet de serpent",
+    "gold_total": 2500,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6695.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "6696": {
+    "name": "Arc axiomatique",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6696.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "6697": {
+    "name": "Orgueil",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6697.png",
+    "color": [
+      "#FCDC12",
+      "#ff0000"
+    ]
+  },
+  "6698": {
+    "name": "Hydre profane",
+    "gold_total": 3200,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6698.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "6699": {
+    "name": "Cyclosabre voltaïque",
+    "gold_total": 3000,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6699.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "6701": {
+    "name": "Opportunité",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6701.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "8001": {
+    "name": "Chaînes de l'anathème",
+    "gold_total": 2500,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/8001.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "8010": {
+    "name": "Malédiction du sanguinaire",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/8010.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "8020": {
+    "name": "Masque abyssal",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/8020.png",
+    "color": [
+      "#00ffff",
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "322065": {
+    "name": "Chant de guerre de Shurelya",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/322065.png",
+    "color": [
+      "#ff0000",
+      "#FCDC12"
+    ]
+  },
+  "323002": {
+    "name": "Sac de l'explorateur",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323002.png",
+    "color": [
+      "#ff0000",
+      "#00ff00"
+    ]
+  },
+  "323003": {
+    "name": "Bâton de l'archange",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323003.png",
+    "color": [
+      "#00ffff",
+      "#0000ff",
+      "#ff0000"
+    ]
+  },
+  "323004": {
+    "name": "Manamune",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323004.png",
+    "color": [
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "323040": {
+    "name": "Étreinte du séraphin",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323040.png",
+    "color": [
+      "#ff0000",
+      "#00ffff",
+      "#00ff00"
+    ]
+  },
+  "323042": {
+    "name": "Muramana",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323042.png",
+    "color": [
+      "#0000ff",
+      "#00ffff",
+      "#ff0000"
+    ]
+  },
+  "323050": {
+    "name": "Convergence de Zeke",
+    "gold_total": 2300,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323050.png",
+    "color": [
+      "#ff0000",
+      "#00ffff"
+    ]
+  },
+  "323075": {
+    "name": "Cotte épineuse",
+    "gold_total": 2650,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323075.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "323107": {
+    "name": "Rédemption",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323107.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "323109": {
+    "name": "Vœu du chevalier",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323109.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "323110": {
+    "name": "Cœur gelé",
+    "gold_total": 2700,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323110.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "323119": {
+    "name": "Approche de l'hiver",
+    "gold_total": 2400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323119.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "323121": {
+    "name": "Fimbulvetr",
+    "gold_total": 2400,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323121.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "323190": {
+    "name": "Médaillon de l'Iron Solari",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323190.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "323222": {
+    "name": "Bénédiction de Mikael",
+    "gold_total": 2800,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323222.png",
+    "color": [
+      "#00ff00",
+      "#ff0000"
+    ]
+  },
+  "323504": {
+    "name": "Encensoir ardent",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/323504.png",
+    "color": [
+      "#ff0000",
+      "#00ff00"
+    ]
+  },
+  "324005": {
+    "name": "Mandat impérial",
+    "gold_total": 2750,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/324005.png",
+    "color": [
+      "#ff0000"
+    ]
+  },
+  "326616": {
+    "name": "Bâton des flots",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/326616.png",
+    "color": [
+      "#0000ff",
+      "#00ffff"
+    ]
+  },
+  "326617": {
+    "name": "Régénérateur de pierre de lune",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/326617.png",
+    "color": [
+      "#00ffff"
+    ]
+  },
+  "326620": {
+    "name": "Échos d'Helia",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/326620.png",
+    "color": [
+      "#00ff00",
+      "#00ffff"
+    ]
+  },
+  "326621": {
+    "name": "Cœur de l'aube",
+    "gold_total": 2900,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/326621.png",
+    "color": [
+      "#00ffff",
+      "#0000ff"
+    ]
+  },
+  "326657": {
+    "name": "Bâton séculaire",
+    "gold_total": 2600,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/326657.png",
+    "color": [
+      "#00ff00"
+    ]
+  },
+  "328020": {
+    "name": "Masque abyssal",
+    "gold_total": 2850,
+    "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/328020.png",
+    "color": [
+      "#00ffff",
+      "#00ff00",
+      "#ff0000"
     ]
   }
 }

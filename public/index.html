@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Item Finder</title>
+    <title>Générateur de Couleur LoL</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Beaufort+for+LOL:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-overlay"></div>
     <div class="container">
-        <h1>Color Item Finder</h1>
-        <div id="color-box"></div>
-        <div class="button-container">
-            <button id="generate-color">Générer une Couleur</button>
-            <button id="find-item">Trouver un Item</button>
+        <header class="lol-header">
+            <h1>Générateur de Couleur LoL</h1>
+            <div class="separator"></div>
+        </header>
+
+        <div class="color-generator">
+            <div class="color-box" id="colorBox"></div>
+            <div class="generator-buttons">
+                <button class="lol-button generate-button" id="generateBtn">Générer</button>
+                <button class="lol-button find-button" id="findBtn">Trouver</button>
+            </div>
         </div>
-        <div id="item-images">
-            <!-- Les conteneurs d'items sont ajoutés dynamiquement -->
+
+        <div id="itemsContainer"></div>
+    </div>
+
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="item-details">
+                <img id="modalImage" src="" alt="Item">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="item-stats"></div>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

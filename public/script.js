@@ -1,113 +1,204 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Récupérer les éléments HTML
-    const colorBox = document.getElementById("color-box");
-    const generateColorButton = document.getElementById("generate-color");
-    const findItemButton = document.getElementById("find-item");
-    const itemImagesContainer = document.getElementById("item-images");
+document.addEventListener('DOMContentLoaded', () => {
+    const colorBox = document.getElementById('colorBox');
+    const generateButton = document.querySelector('.generate-button');
+    const findButton = document.querySelector('.find-button');
+    const itemsContainer = document.getElementById('itemsContainer');
+    const modal = document.getElementById('itemModal');
+    const closeModal = document.querySelector('.close');
+    
+    let items = [];
+    let currentColor = null;
 
-    let generatedColor = null; // Variable pour stocker la couleur générée
-    let itemsData = null; // Variable pour stocker les données de tous les items
+    // Couleurs disponibles
+    const colors = {
+        red: '#ff0000',
+        blue: '#0000ff',
+        green: '#00ff00',
+        yellow: '#FCDC12',
+        orange: '#ff8000',
+        purple: '#ff00ff'
+    };
 
-    // Couleurs primaires et secondaires
-    const primaryColors = ['#ff0000', '#00ff00', '#0000ff']; // Rouge, Vert, Bleu
-    const secondaryColors = ['#FCDC12', '#ff8000', '#ff00ff']; // Jaune, orange, Magenta
-    const combinedColors = primaryColors.concat(secondaryColors); // Combiner les couleurs primaires et secondaires
-
-    // Cacher le deuxième bouton initialement
-    findItemButton.style.display = "none";
-
-    // Fonction pour charger les données des items
-    function loadItemsData() {
-        return fetch("/data/data.json") // Change le chemin pour correspondre à 'data.json'
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+    // Charger les items depuis le serveur
+    fetch('/data/items.json')
+        .then(response => response.json())
+        .then(data => {
+            // Transformer les données en tableau
+            items = Object.entries(data).map(([id, item]) => ({
+                id,
+                name: item.name,
+                image: item.image,
+                description: item.description || '',
+                colors: item.color || [],
+                stats: {
+                    price: item.gold_total
                 }
-                return response.json();
-            })
-            .then(data => {
-                itemsData = data;
-                console.log("Données des items chargées:", itemsData);
-            })
-            .catch(error => {
-                console.error("Une erreur s'est produite lors du chargement des données des items:", error);
-            });
+            }));
+            console.log('Items chargés:', items.length);
+        })
+        .catch(error => console.error('Erreur:', error));
+
+    // Générer une couleur aléatoire
+    generateButton.addEventListener('click', () => {
+        const colorKeys = Object.keys(colors);
+        const randomColor = colorKeys[Math.floor(Math.random() * colorKeys.length)];
+        currentColor = randomColor;
+        colorBox.style.backgroundColor = colors[randomColor];
+        findButton.style.display = 'block';
+
+        // Animation de la boîte de couleur
+        colorBox.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            colorBox.style.transform = 'scale(1)';
+        }, 200);
+
+        console.log('Couleur générée:', randomColor);
+    });
+
+    // Trouver des items correspondant à la couleur
+    findButton.addEventListener('click', () => {
+        if (!currentColor) return;
+
+        console.log('Recherche d\'items pour la couleur:', currentColor);
+        console.log('Nombre total d\'items:', items.length);
+
+        const matchingItems = filterItemsByColor(items, currentColor);
+        console.log('Items correspondants trouvés:', matchingItems.length);
+        
+        // Supprimer les doublons basés sur le nom de l'item
+        const uniqueItems = Array.from(new Map(matchingItems.map(item => [item.name, item])).values());
+        
+        // Mélanger et prendre 6 items au hasard
+        const shuffledItems = uniqueItems.sort(() => 0.5 - Math.random());
+        const selectedItems = shuffledItems.slice(0, 6);
+        
+        displayItems(selectedItems);
+
+        // Animation des items
+        const cards = document.querySelectorAll('.item-card');
+        cards.forEach((card, index) => {
+            card.style.animation = `fadeIn 0.3s ease forwards ${index * 0.1}s`;
+        });
+    });
+
+    // Fermer le modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Fonction pour afficher les items
+    function displayItems(itemsToDisplay) {
+        itemsContainer.innerHTML = '';
+        
+        if (itemsToDisplay.length === 0) {
+            itemsContainer.innerHTML = '<div class="no-items">Aucun item trouvé pour cette couleur</div>';
+            return;
+        }
+        
+        itemsToDisplay.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'item-card';
+            
+            card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <div class="item-price">${item.stats.price} pièces d'or</div>
+            `;
+
+            card.addEventListener('click', () => showItemDetails(item));
+            itemsContainer.appendChild(card);
+        });
     }
 
-    // Charger les données des items dès que la page est chargée
-    loadItemsData();
-
-    // Fonction pour générer une couleur aléatoire parmi les couleurs primaires et secondaires
-    generateColorButton.addEventListener("click", function() {
-        const randomIndex = Math.floor(Math.random() * combinedColors.length);
-        generatedColor = combinedColors[randomIndex];
-        colorBox.style.backgroundColor = generatedColor;
-        console.log("Couleur générée:", generatedColor);
-
-        // Afficher le deuxième bouton une fois que la couleur est générée
-        findItemButton.style.display = "block";
-    });
-
-    // Fonction pour trouver des items avec la couleur générée
-    findItemButton.addEventListener("click", function() {
-        if (!generatedColor) {
-            console.error("Aucune couleur générée. Cliquez d'abord sur le bouton pour générer une couleur.");
-            return;
-        }
-
-        if (!itemsData) {
-            console.error("Les données des items ne sont pas encore chargées. Veuillez patienter.");
-            return;
-        }
-
-        // Trouver les items correspondants
-        const matchingItems = Object.entries(itemsData).filter(([itemId, itemData]) => {
-            if (!itemData.color) {
-                console.warn(`L'article ${itemId} ne contient pas de propriété 'color'. Cet article sera ignoré.`);
-                return false;
+    // Fonction pour filtrer les items par couleur
+    function filterItemsByColor(items, color) {
+        const colorHex = colors[color];
+        console.log('Couleur recherchée:', color, 'Hex:', colorHex);
+        return items.filter(item => {
+            console.log('Item vérifié:', item.name, 'Couleurs:', item.colors);
+            if (!item.colors || item.colors.length === 0) return false;
+            
+            // Pour le jaune, on accepte aussi les variations dorées
+            if (color === 'yellow') {
+                return item.colors.some(itemColor => {
+                    const hex = itemColor.toLowerCase();
+                    // Convertir la couleur hex en RGB
+                    const r = parseInt(hex.slice(1, 3), 16);
+                    const g = parseInt(hex.slice(3, 5), 16);
+                    const b = parseInt(hex.slice(5, 7), 16);
+                    
+                    // Conditions pour le jaune/doré :
+                    // - Rouge et Vert élevés (pour le jaune)
+                    // - Bleu plus bas (pour distinguer du blanc)
+                    // - Rouge légèrement plus élevé que Vert (pour le doré)
+                    return r > 200 && g > 180 && b < 150 && r >= g;
+                });
             }
-            return itemData.color.includes(generatedColor);
+            
+            return item.colors.some(itemColor => itemColor.toLowerCase() === colorHex.toLowerCase());
         });
+    }
 
-        itemImagesContainer.innerHTML = ''; // Effacer les éléments précédents
+    // Fonction pour afficher les détails d'un item
+    function showItemDetails(item) {
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const itemStats = document.querySelector('.item-stats');
 
-        if (matchingItems.length > 0) {
-            // Mélanger les items correspondants
-            const shuffledItems = matchingItems.sort(() => 0.5 - Math.random());
+        modalImage.src = item.image;
+        modalTitle.textContent = item.name;
+        modalDescription.textContent = item.description || 'Description non disponible';
+        
+        itemStats.innerHTML = `
+            <div class="stat">
+                <span class="stat-label">Prix:</span>
+                <span class="stat-value">${item.stats.price} pièces d'or</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Couleurs:</span>
+                <span class="stat-value">${item.colors ? item.colors.join(', ') : 'Non spécifié'}</span>
+            </div>
+        `;
 
-            // Afficher jusqu'à 6 items correspondants
-            for (let i = 0; i < Math.min(6, shuffledItems.length); i++) {
-                const [selectedItemId, selectedItemData] = shuffledItems[i];
-
-                const itemContainer = document.createElement("div");
-                itemContainer.className = "item-container";
-
-                const itemImage = document.createElement("img");
-                itemImage.className = "item-image";
-                itemImage.src = selectedItemData.image; // Utilise 'image' pour l'URL de l'image
-                itemImage.alt = selectedItemData.name;
-                itemImage.style.display = "block";
-
-                const itemName = document.createElement("div");
-                itemName.className = "item-name";
-                itemName.textContent = selectedItemData.name; // Affiche le nom de l'item
-                itemName.style.display = "block";
-
-                const itemPrice = document.createElement("div"); // Nouveau div pour le prix
-                itemPrice.className = "item-price";
-                itemPrice.textContent = `Prix: ${selectedItemData.gold_total} pièces d'or`; // Affiche le prix
-                itemPrice.style.display = "block";
-
-                itemContainer.appendChild(itemImage);
-                itemContainer.appendChild(itemName);
-                itemContainer.appendChild(itemPrice); // Ajoute le prix au conteneur
-
-                itemImagesContainer.appendChild(itemContainer);
-
-                console.log(`Item correspondant trouvé : ${selectedItemData.name}`);
-            }
-        } else {
-            console.log("Aucun item trouvé avec la couleur générée.");
-        }
-    });
+        modal.style.display = 'block';
+    }
 });
+
+// Styles pour l'animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .item-card {
+        opacity: 0;
+    }
+
+    .color-box {
+        transition: transform 0.2s ease;
+    }
+
+    .no-items {
+        text-align: center;
+        color: var(--lol-light);
+        font-size: 1.2rem;
+        padding: 2rem;
+        grid-column: 1 / -1;
+    }
+`;
+document.head.appendChild(style);
