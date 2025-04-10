@@ -1,10 +1,10 @@
-import requests
 import json
 import os
+import requests
 
 # URL du fichier JSON contenant les données des items
 url = "https://ddragon.leagueoflegends.com/cdn/15.7.1/data/fr_FR/item.json"
-response = requests.get(url)
+response = requests.get(url, timeout=30)
 
 # Vérifier si la requête a réussi
 if response.status_code == 200:
