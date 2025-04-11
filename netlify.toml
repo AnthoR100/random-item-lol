@@ -1,5 +1,5 @@
 [build]
-  command = "npm install"
+  command = "npm install && cd functions && npm install"
   publish = "public"
 
 [functions]
