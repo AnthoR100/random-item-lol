@@ -3,6 +3,8 @@
     npm install &&
     mkdir -p functions/data &&
     cp data/items.json functions/data/ &&
+    mkdir -p public/data &&
+    cp data/items.json public/data/ &&
     cd functions && npm install
   """
   publish = "public"
