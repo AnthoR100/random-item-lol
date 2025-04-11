@@ -135,39 +135,42 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Item vérifié:', item.name, 'Couleurs:', item.colors);
             if (!item.colors || item.colors.length === 0) return false;
             
-            // Pour le jaune, on accepte aussi les variations dorées
-            if (color === 'yellow') {
-                return item.colors.some(itemColor => {
-                    const hex = itemColor.toLowerCase();
-                    // Convertir la couleur hex en RGB
-                    const r = parseInt(hex.slice(1, 3), 16);
-                    const g = parseInt(hex.slice(3, 5), 16);
-                    const b = parseInt(hex.slice(5, 7), 16);
-                    
-                    // Conditions pour le jaune/doré :
-                    // - Rouge et Vert élevés (pour le jaune)
-                    // - Bleu plus bas (pour distinguer du blanc)
-                    // - Rouge légèrement plus élevé que Vert (pour le doré)
-                    return r > 200 && g > 180 && b < 150 && r >= g;
-                });
-            }
+            return item.colors.some(itemColor => {
+                const hex = itemColor.toLowerCase();
+                // Convertir la couleur hex en RGB
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
 
-            // Pour le violet/purple
-            if (color === 'purple') {
-                return item.colors.some(itemColor => {
-                    const hex = itemColor.toLowerCase();
-                    // Convertir la couleur hex en RGB
-                    const r = parseInt(hex.slice(1, 3), 16);
-                    const g = parseInt(hex.slice(3, 5), 16);
-                    const b = parseInt(hex.slice(5, 7), 16);
+                switch(color) {
+                    case 'red':
+                        // Rouge élevé et dominant
+                        return r > 180 && r > g * 1.5 && r > b * 1.5 && g < 150 && b < 150;
                     
-                    // Conditions pour le violet :
-                    // Rouge et Bleu élevés, Vert bas
-                    return r > 200 && b > 200 && g < 100;
-                });
-            }
-            
-            return item.colors.some(itemColor => itemColor.toLowerCase() === colorHex.toLowerCase());
+                    case 'blue':
+                        // Bleu élevé et dominant
+                        return b > 180 && b > r * 1.5 && b > g * 1.5 && r < 150 && g < 150;
+                    
+                    case 'green':
+                        // Vert élevé et dominant
+                        return g > 180 && g > r * 1.5 && g > b * 1.5 && r < 150 && b < 150;
+                    
+                    case 'yellow':
+                        // Rouge et Vert élevés, Bleu bas
+                        return r > 200 && g > 180 && b < 150 && r >= g;
+                    
+                    case 'orange':
+                        // Rouge très élevé, Vert moyen, Bleu bas
+                        return r > 200 && g > 100 && g < 180 && b < 100 && r > g * 1.3;
+                    
+                    case 'purple':
+                        // Rouge et Bleu élevés, Vert bas
+                        return r > 200 && b > 200 && g < 100;
+                    
+                    default:
+                        return hex === colorHex;
+                }
+            });
         });
     }
 
