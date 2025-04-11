@@ -1,15 +1,3 @@
-// Importer les données directement
-const items = {
-  "2065": {
-    "name": "Chant de guerre de Shurelya",
-    "image": "https://ddragon.leagueoflegends.com/cdn/13.24.1/img/item/2065.png",
-    "description": "...",
-    "color": ["#ff0000"],
-    "gold_total": 2300
-  }
-  // ... autres items ...
-};
-
 exports.handler = async function(event, context) {
   try {
     const items = {
