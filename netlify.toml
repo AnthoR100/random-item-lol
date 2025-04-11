@@ -1,5 +1,10 @@
 [build]
-  command = "npm install && cd functions && npm install"
+  command = """
+    python recupItem.py &&
+    mkdir -p functions/data &&
+    cp data/items.json functions/data/ &&
+    npm install && cd functions && npm install
+  """
   publish = "public"
 
 [functions]
