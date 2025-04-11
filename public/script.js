@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // URL de l'API
-    const API_URL = window.location.hostname === 'localhost' 
-        ? '/data/items.json'
-        : '/.netlify/functions/api';
+    const API_URL = '/data/items.json';
 
     // Charger les items depuis le serveur
     fetch(API_URL)
