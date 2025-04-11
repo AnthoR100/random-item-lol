@@ -144,28 +144,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 switch(color) {
                     case 'red':
-                        // Rouge élevé et dominant
-                        return r > 180 && r > g * 1.5 && r > b * 1.5 && g < 150 && b < 150;
+                        // Rouge doit être très dominant
+                        return r > 200 && r > g * 2 && r > b * 2 && g < 130 && b < 130;
                     
                     case 'blue':
-                        // Bleu élevé et dominant
-                        return b > 180 && b > r * 1.5 && b > g * 1.5 && r < 150 && g < 150;
+                        // Bleu doit être très dominant
+                        return b > 180 && b > r * 1.8 && b > g * 1.8 && r < 130 && g < 130;
                     
                     case 'green':
-                        // Vert élevé et dominant
-                        return g > 180 && g > r * 1.5 && g > b * 1.5 && r < 150 && b < 150;
+                        // Vert doit être très dominant
+                        return g > 180 && g > r * 1.8 && g > b * 1.8 && r < 130 && b < 130;
                     
                     case 'yellow':
-                        // Rouge et Vert élevés, Bleu bas
-                        return r > 200 && g > 180 && b < 150 && r >= g;
+                        // Rouge et Vert élevés et proches, Bleu très bas
+                        return r > 180 && g > 160 && 
+                               Math.abs(r - g) < 50 && // Rouge et Vert doivent être proches
+                               b < 100 && // Bleu doit être bas
+                               (r + g) > b * 4; // Rouge + Vert doivent être beaucoup plus élevés que Bleu
                     
                     case 'orange':
-                        // Rouge très élevé, Vert moyen, Bleu bas
-                        return r > 200 && g > 100 && g < 180 && b < 100 && r > g * 1.3;
+                        // Rouge très élevé, Vert moyen-haut, Bleu très bas
+                        return r > 220 && 
+                               g > 120 && g < 200 && 
+                               b < 80 && 
+                               r > g * 1.4;
                     
                     case 'purple':
-                        // Rouge et Bleu élevés, Vert bas
-                        return r > 200 && b > 200 && g < 100;
+                        // Rouge et Bleu élevés et proches, Vert bas
+                        return r > 150 && b > 150 && 
+                               Math.abs(r - b) < 40 && // Rouge et Bleu doivent être proches
+                               g < Math.min(r, b) * 0.7; // Vert doit être significativement plus bas
                     
                     default:
                         return hex === colorHex;
