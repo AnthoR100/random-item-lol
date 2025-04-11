@@ -144,76 +144,88 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fonction pour filtrer les items par couleur
     function filterItemsByColor(items, color) {
         const colorHex = colors[color];
-        console.log('Couleur recherchée:', color, 'Hex:', colorHex);
-        return items.filter(item => {
-            console.log('Item vérifié:', item.name, 'Couleurs:', item.colors);
+        console.log('Analyse des couleurs en cours...');
+
+        // Compteur simplifié pour la distribution
+        let colorCount = 0;
+        let totalAnalyzed = 0;
+
+        const filteredItems = items.filter(item => {
             if (!item.colors || item.colors.length === 0) return false;
             
             return item.colors.some(itemColor => {
                 const hex = itemColor.toLowerCase();
-                // Convertir la couleur hex en RGB
                 const r = parseInt(hex.slice(1, 3), 16);
                 const g = parseInt(hex.slice(3, 5), 16);
                 const b = parseInt(hex.slice(5, 7), 16);
 
+                totalAnalyzed++;
+                let isMatch = false;
+
                 switch(color) {
                     case 'red':
-                        // Rouge doit être TRÈS dominant avec des conditions plus strictes
-                        return r > 200 && r > g * 2.2 && r > b * 2.2 && 
-                               g < 100 && b < 100 && 
-                               Math.max(g, b) < r * 0.4; // Ajout d'une condition supplémentaire
+                        isMatch = r > 200 && r > g * 2.2 && r > b * 2.2 && 
+                                g < 100 && b < 100 && 
+                                Math.max(g, b) < r * 0.4;
+                        break;
                     
                     case 'blue':
-                        // Amélioration de la détection du bleu avec plus de cas
-                        return (b > 130 && b > r * 1.2 && b > g * 1.2) || // Cas général
-                               (b > 100 && b > Math.max(r, g) * 1.1 && r < 130 && g < 130) || // Bleus moyens
-                               (b > 80 && g < 80 && r < 80) || // Bleus sombres
-                               (b > 130 && (r + g) < b * 2); // Bleus dominants
+                        isMatch = (b > 130 && b > r * 1.2 && b > g * 1.2) || 
+                                (b > 100 && b > Math.max(r, g) * 1.1 && r < 130 && g < 130) || 
+                                (b > 80 && g < 80 && r < 80) || 
+                                (b > 130 && (r + g) < b * 2);
+                        break;
                     
                     case 'green':
-                        // Vert avec détection améliorée
-                        return (g > 130 && g > r * 1.2 && g > b * 1.2) || // Cas général
-                               (g > 100 && g > Math.max(r, b) * 1.1 && r < 130 && b < 130) || // Verts moyens
-                               (g > 80 && r < 80 && b < 80); // Verts sombres
+                        isMatch = (g > 130 && g > r * 1.2 && g > b * 1.2) || 
+                                (g > 100 && g > Math.max(r, b) * 1.1 && r < 130 && b < 130) || 
+                                (g > 80 && r < 80 && b < 80);
+                        break;
                     
                     case 'yellow':
-                        // Meilleure détection du jaune
-                        return r > 160 && g > 140 && 
-                               Math.abs(r - g) < 70 && // Plus de tolérance entre Rouge et Vert
-                               b < 130 && // Tolérance plus élevée pour le Bleu
-                               (r + g) > b * 3; // Ratio moins strict
+                        isMatch = r > 160 && g > 140 && 
+                                Math.abs(r - g) < 70 && 
+                                b < 130 && 
+                                (r + g) > b * 3;
+                        break;
                     
                     case 'orange':
-                        // Orange avec conditions plus souples
-                        return r > 160 && // Rouge moins dominant
-                               g >= 80 && g <= 180 && // Plus de tolérance pour le vert
-                               b < 120 && // Plus de tolérance pour le bleu
-                               r > g * 1.1 && // Ratio rouge/vert plus souple
-                               g > b * 1.2; // Le vert doit être plus élevé que le bleu
+                        isMatch = r > 160 && 
+                                g >= 80 && g <= 180 && 
+                                b < 120 && 
+                                r > g * 1.1 && 
+                                g > b * 1.2;
+                        break;
                     
                     case 'purple':
-                        // Violet avec conditions plus souples
-                        return (
-                            // Cas 1 : Violet classique
-                            (r > 100 && b > 100 && // Seuils plus bas
-                            Math.abs(r - b) < 80 && // Plus de tolérance entre rouge et bleu
-                            g < Math.min(r, b) * 0.95 && // Beaucoup plus de tolérance pour le vert
-                            g < 130) || // Limite plus haute pour le vert
-                            // Cas 2 : Violet foncé
-                            (r > 80 && b > 80 && 
-                            Math.abs(r - b) < 50 && 
-                            g < 80) ||
-                            // Cas 3 : Violet clair
-                            (r > 150 && b > 150 && 
-                            Math.abs(r - b) < 100 && 
-                            g < 150)
-                        );
+                        isMatch = (r > 100 && b > 100 && 
+                                Math.abs(r - b) < 80 && 
+                                g < Math.min(r, b) * 0.95 && 
+                                g < 130) || 
+                                (r > 80 && b > 80 && 
+                                Math.abs(r - b) < 50 && 
+                                g < 80) ||
+                                (r > 150 && b > 150 && 
+                                Math.abs(r - b) < 100 && 
+                                g < 150);
+                        break;
                     
                     default:
-                        return hex === colorHex;
+                        isMatch = hex === colorHex;
                 }
+
+                if (isMatch) colorCount++;
+                return isMatch;
             });
         });
+
+        // Afficher un résumé concis
+        console.log(`Résultats pour ${color}:`);
+        console.log(`- Items trouvés: ${filteredItems.length}`);
+        console.log(`- Couleurs analysées: ${totalAnalyzed}`);
+        console.log(`- Correspondances trouvées: ${colorCount}`);
+        
+        return filteredItems;
     }
 
     // Fonction pour afficher les détails d'un item
