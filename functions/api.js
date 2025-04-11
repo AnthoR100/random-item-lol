@@ -13,7 +13,6 @@ exports.handler = async function(event, context) {
       id,
       name: item.name,
       image: item.image,
-      description: item.description || "",
       colors: item.color || [],
       stats: {
         price: item.gold_total
