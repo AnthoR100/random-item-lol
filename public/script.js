@@ -21,33 +21,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // URL de l'API
     const API_URL = '/data/items.json';
+    let isLoading = false;
 
-    // Charger les items depuis le serveur
-    fetch(API_URL)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur réseau');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Transformer les données en tableau
-            items = Object.entries(data).map(([id, item]) => ({
-                id,
-                name: item.name,
-                image: item.image,
-                description: item.description || '',
-                colors: item.color || [],
-                stats: {
-                    price: item.gold_total
+    // Fonction pour charger les items
+    function loadItems() {
+        if (isLoading) return;
+        isLoading = true;
+        itemsContainer.innerHTML = '<div class="loading-message">Chargement des items...</div>';
+
+        fetch(API_URL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur réseau');
                 }
-            }));
-            console.log('Items chargés:', items.length);
-        })
-        .catch(error => {
-            console.error('Erreur:', error);
-            itemsContainer.innerHTML = '<div class="error-message">Erreur lors du chargement des items</div>';
-        });
+                return response.json();
+            })
+            .then(data => {
+                // Transformer les données en tableau
+                items = Object.entries(data).map(([id, item]) => ({
+                    id,
+                    name: item.name,
+                    image: item.image,
+                    description: item.description || '',
+                    colors: item.colors || item.color || [], // Support pour les deux formats
+                    stats: {
+                        price: item.gold_total
+                    }
+                }));
+                console.log('Items chargés:', items.length);
+                itemsContainer.innerHTML = ''; // Nettoyer le message de chargement
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                itemsContainer.innerHTML = '<div class="error-message">Erreur lors du chargement des items. Veuillez rafraîchir la page.</div>';
+            })
+            .finally(() => {
+                isLoading = false;
+            });
+    }
+
+    // Charger les items au démarrage
+    loadItems();
 
     // Générer une couleur aléatoire
     generateButton.addEventListener('click', () => {
@@ -144,36 +158,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 switch(color) {
                     case 'red':
-                        // Rouge doit être très dominant
-                        return r > 200 && r > g * 2 && r > b * 2 && g < 130 && b < 130;
+                        // Rouge doit être très dominant mais avec une tolérance plus faible
+                        return r > 180 && r > g * 1.8 && r > b * 1.8 && g < 120 && b < 120;
                     
                     case 'blue':
-                        // Bleu doit être très dominant
-                        return b > 180 && b > r * 1.8 && b > g * 1.8 && r < 130 && g < 130;
+                        // Amélioration de la détection du bleu
+                        return (b > 140 && b > r * 1.3 && b > g * 1.3) || 
+                               (b > 100 && b > Math.max(r, g) * 1.2 && r < 120 && g < 120) ||
+                               (b > 130 && r < 100 && g < 100); // Pour les bleus plus sombres
                     
                     case 'green':
-                        // Vert doit être très dominant
-                        return g > 180 && g > r * 1.8 && g > b * 1.8 && r < 130 && b < 130;
+                        // Vert avec meilleure tolérance
+                        return g > 140 && g > r * 1.3 && g > b * 1.3 && r < 130 && b < 130;
                     
                     case 'yellow':
-                        // Rouge et Vert élevés et proches, Bleu très bas
-                        return r > 180 && g > 160 && 
-                               Math.abs(r - g) < 50 && // Rouge et Vert doivent être proches
-                               b < 100 && // Bleu doit être bas
-                               (r + g) > b * 4; // Rouge + Vert doivent être beaucoup plus élevés que Bleu
+                        // Meilleure détection du jaune avec plus de tolérance
+                        return r > 160 && g > 140 && 
+                               Math.abs(r - g) < 60 && // Plus de tolérance entre Rouge et Vert
+                               b < 120 && // Tolérance plus élevée pour le Bleu
+                               (r + g) > b * 3.5; // Ratio moins strict
                     
                     case 'orange':
-                        // Rouge très élevé, Vert moyen-haut, Bleu très bas
-                        return r > 220 && 
-                               g > 120 && g < 200 && 
-                               b < 80 && 
-                               r > g * 1.4;
+                        // Orange avec meilleure distinction du rouge
+                        return r > 200 && 
+                               g >= 100 && g <= 180 && 
+                               b < 100 && 
+                               r > g * 1.2 && r < g * 2;
                     
                     case 'purple':
-                        // Rouge et Bleu élevés et proches, Vert bas
-                        return r > 150 && b > 150 && 
-                               Math.abs(r - b) < 40 && // Rouge et Bleu doivent être proches
-                               g < Math.min(r, b) * 0.7; // Vert doit être significativement plus bas
+                        // Violet avec meilleure détection
+                        return r > 130 && b > 130 && 
+                               Math.abs(r - b) < 50 && // Plus de tolérance
+                               g < Math.min(r, b) * 0.8 && // Un peu plus de tolérance pour le vert
+                               g < 120; // Limite absolue pour le vert
                     
                     default:
                         return hex === colorHex;
@@ -228,6 +245,23 @@ style.textContent = `
 
     .color-box {
         transition: transform 0.2s ease;
+    }
+
+    .loading-message, .error-message {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+        grid-column: 1 / -1;
+    }
+
+    .loading-message {
+        color: var(--lol-light);
+    }
+
+    .error-message {
+        color: #ff4444;
+        background-color: rgba(255, 68, 68, 0.1);
+        border-radius: 8px;
     }
 
     .no-items {
