@@ -1,52 +1,47 @@
 const fs = require('fs');
 const path = require('path');
 
+const itemsData = {
+    "2065": {
+        "name": "Chant de guerre de Shurelya",
+        "gold_total": 2200,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/2065.png",
+        "colors": ["#FCDC12"]
+    },
+    "3074": {
+        "name": "Hydre vorace",
+        "gold_total": 3300,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3074.png",
+        "colors": ["#ff0000"]
+    },
+    "3071": {
+        "name": "Couperet noir",
+        "gold_total": 3000,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3071.png",
+        "colors": ["#ff00ff"]
+    },
+    "6676": {
+        "name": "Créateur de failles",
+        "gold_total": 3200,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/6676.png",
+        "colors": ["#ff00ff", "#ff8000"]
+    },
+    "3040": {
+        "name": "Étreinte du séraphin",
+        "gold_total": 2900,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3040.png",
+        "colors": ["#0000ff"]
+    },
+    "3011": {
+        "name": "Bénédiction de Mikael",
+        "gold_total": 2300,
+        "image": "https://ddragon.leagueoflegends.com/cdn/15.7.1/img/item/3011.png",
+        "colors": ["#00ff00"]
+    }
+};
+
 exports.handler = async function(event, context) {
   try {
-    // Essayer plusieurs chemins possibles
-    const possiblePaths = [
-      path.join(__dirname, 'data', 'items.json'),
-      path.join(__dirname, '..', 'data', 'items.json'),
-      path.join(process.cwd(), 'data', 'items.json')
-    ];
-
-    console.log('Chemins possibles:', possiblePaths);
-    
-    let itemsData = null;
-    let errorMessages = [];
-
-    for (const itemsPath of possiblePaths) {
-      try {
-        console.log('Tentative de lecture du fichier:', itemsPath);
-        if (fs.existsSync(itemsPath)) {
-          console.log('Le fichier existe à:', itemsPath);
-          const fileContent = fs.readFileSync(itemsPath, 'utf8');
-          itemsData = JSON.parse(fileContent);
-          console.log('Fichier lu avec succès');
-          break;
-        } else {
-          console.log('Le fichier n\'existe pas à:', itemsPath);
-          errorMessages.push(`Fichier non trouvé: ${itemsPath}`);
-        }
-      } catch (error) {
-        console.error('Erreur lors de la lecture à', itemsPath, ':', error);
-        errorMessages.push(`Erreur: ${error.message} à ${itemsPath}`);
-      }
-    }
-
-    if (!itemsData) {
-      console.error('Aucun fichier trouvé. Erreurs:', errorMessages);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ 
-          error: 'Erreur lors de la lecture des données',
-          details: errorMessages,
-          currentDir: __dirname,
-          workingDir: process.cwd()
-        })
-      };
-    }
-
     return {
       statusCode: 200,
       headers: {
