@@ -158,39 +158,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 switch(color) {
                     case 'red':
-                        // Rouge doit être très dominant mais avec une tolérance plus faible
-                        return r > 180 && r > g * 1.8 && r > b * 1.8 && g < 120 && b < 120;
+                        // Rouge doit être TRÈS dominant avec des conditions plus strictes
+                        return r > 200 && r > g * 2.2 && r > b * 2.2 && 
+                               g < 100 && b < 100 && 
+                               Math.max(g, b) < r * 0.4; // Ajout d'une condition supplémentaire
                     
                     case 'blue':
-                        // Amélioration de la détection du bleu
-                        return (b > 140 && b > r * 1.3 && b > g * 1.3) || 
-                               (b > 100 && b > Math.max(r, g) * 1.2 && r < 120 && g < 120) ||
-                               (b > 130 && r < 100 && g < 100); // Pour les bleus plus sombres
+                        // Amélioration de la détection du bleu avec plus de cas
+                        return (b > 130 && b > r * 1.2 && b > g * 1.2) || // Cas général
+                               (b > 100 && b > Math.max(r, g) * 1.1 && r < 130 && g < 130) || // Bleus moyens
+                               (b > 80 && g < 80 && r < 80) || // Bleus sombres
+                               (b > 130 && (r + g) < b * 2); // Bleus dominants
                     
                     case 'green':
-                        // Vert avec meilleure tolérance
-                        return g > 140 && g > r * 1.3 && g > b * 1.3 && r < 130 && b < 130;
+                        // Vert avec détection améliorée
+                        return (g > 130 && g > r * 1.2 && g > b * 1.2) || // Cas général
+                               (g > 100 && g > Math.max(r, b) * 1.1 && r < 130 && b < 130) || // Verts moyens
+                               (g > 80 && r < 80 && b < 80); // Verts sombres
                     
                     case 'yellow':
-                        // Meilleure détection du jaune avec plus de tolérance
+                        // Meilleure détection du jaune
                         return r > 160 && g > 140 && 
-                               Math.abs(r - g) < 60 && // Plus de tolérance entre Rouge et Vert
-                               b < 120 && // Tolérance plus élevée pour le Bleu
-                               (r + g) > b * 3.5; // Ratio moins strict
+                               Math.abs(r - g) < 70 && // Plus de tolérance entre Rouge et Vert
+                               b < 130 && // Tolérance plus élevée pour le Bleu
+                               (r + g) > b * 3; // Ratio moins strict
                     
                     case 'orange':
-                        // Orange avec meilleure distinction du rouge
-                        return r > 200 && 
-                               g >= 100 && g <= 180 && 
+                        // Orange avec distinction plus claire du rouge
+                        return r > 180 && 
+                               g >= 100 && g <= 160 && 
                                b < 100 && 
-                               r > g * 1.2 && r < g * 2;
+                               r > g * 1.2 && r < g * 2.2 &&
+                               g > b * 1.5;
                     
                     case 'purple':
                         // Violet avec meilleure détection
-                        return r > 130 && b > 130 && 
-                               Math.abs(r - b) < 50 && // Plus de tolérance
-                               g < Math.min(r, b) * 0.8 && // Un peu plus de tolérance pour le vert
-                               g < 120; // Limite absolue pour le vert
+                        return (r > 120 && b > 120 && // Seuils plus bas
+                               Math.abs(r - b) < 60 && // Plus de tolérance
+                               g < Math.min(r, b) * 0.9 && // Plus de tolérance pour le vert
+                               g < 110) || // Limite absolue pour le vert
+                               (r > 150 && b > 150 && g < 100); // Cas des violets plus vifs
                     
                     default:
                         return hex === colorHex;
