@@ -153,6 +153,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     return r > 200 && g > 180 && b < 150 && r >= g;
                 });
             }
+
+            // Pour le violet/purple
+            if (color === 'purple') {
+                return item.colors.some(itemColor => {
+                    const hex = itemColor.toLowerCase();
+                    // Convertir la couleur hex en RGB
+                    const r = parseInt(hex.slice(1, 3), 16);
+                    const g = parseInt(hex.slice(3, 5), 16);
+                    const b = parseInt(hex.slice(5, 7), 16);
+                    
+                    // Conditions pour le violet :
+                    // Rouge et Bleu élevés, Vert bas
+                    return r > 200 && b > 200 && g < 100;
+                });
+            }
             
             return item.colors.some(itemColor => itemColor.toLowerCase() === colorHex.toLowerCase());
         });

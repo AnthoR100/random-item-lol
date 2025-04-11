@@ -1,11 +1,9 @@
 [build]
   command = """
-    pwd &&
-    ls -la &&
+    npm install &&
     mkdir -p functions/data &&
     cp data/items.json functions/data/ &&
-    ls -la functions/data/ &&
-    npm install && cd functions && npm install
+    cd functions && npm install
   """
   publish = "public"
 
