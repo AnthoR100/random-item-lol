@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 name: item.name,
                 image: item.image,
                 description: item.description || '',
-                colors: item.colors || [],
+                colors: item.color || [],
                 stats: {
                     price: item.gold_total
                 }
