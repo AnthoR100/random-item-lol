@@ -1,16 +1,10 @@
 [build]
-  command = """
-    npm install &&
-    mkdir -p functions/data &&
-    cp data/items.json functions/data/ &&
-    cd functions && npm install
-  """
+  command = "npm install"
   publish = "public"
+  functions = "functions"
 
 [functions]
-  directory = "functions"
   node_bundler = "esbuild"
-  included_files = ["functions/data/items.json"]
 
 [[redirects]]
   from = "/api/*"
