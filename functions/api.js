@@ -1,14 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const itemsData = require('./data/items.json');
 
 exports.handler = async function(event, context) {
   try {
-    // Lire le fichier JSON
-    const itemsData = await fs.promises.readFile(path.join(__dirname, 'data', 'items.json'), 'utf8');
-    const items = JSON.parse(itemsData);
-    
     // Transformer les données comme dans server.js
-    const formattedItems = Object.entries(items).map(([id, item]) => ({
+    const formattedItems = Object.entries(itemsData).map(([id, item]) => ({
       id,
       name: item.name,
       image: item.image,
