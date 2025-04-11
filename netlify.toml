@@ -1,13 +1,17 @@
 [build]
   command = """
+    pwd &&
+    ls -la &&
     mkdir -p functions/data &&
     cp data/items.json functions/data/ &&
+    ls -la functions/data/ &&
     npm install && cd functions && npm install
   """
   publish = "public"
 
 [functions]
   directory = "functions"
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = "/api/*"
