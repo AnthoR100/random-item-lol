@@ -184,20 +184,30 @@ document.addEventListener('DOMContentLoaded', () => {
                                (r + g) > b * 3; // Ratio moins strict
                     
                     case 'orange':
-                        // Orange avec distinction plus claire du rouge
-                        return r > 180 && 
-                               g >= 100 && g <= 160 && 
-                               b < 100 && 
-                               r > g * 1.2 && r < g * 2.2 &&
-                               g > b * 1.5;
+                        // Orange avec conditions plus souples
+                        return r > 160 && // Rouge moins dominant
+                               g >= 80 && g <= 180 && // Plus de tolérance pour le vert
+                               b < 120 && // Plus de tolérance pour le bleu
+                               r > g * 1.1 && // Ratio rouge/vert plus souple
+                               g > b * 1.2; // Le vert doit être plus élevé que le bleu
                     
                     case 'purple':
-                        // Violet avec meilleure détection
-                        return (r > 120 && b > 120 && // Seuils plus bas
-                               Math.abs(r - b) < 60 && // Plus de tolérance
-                               g < Math.min(r, b) * 0.9 && // Plus de tolérance pour le vert
-                               g < 110) || // Limite absolue pour le vert
-                               (r > 150 && b > 150 && g < 100); // Cas des violets plus vifs
+                        // Violet avec conditions plus souples
+                        return (
+                            // Cas 1 : Violet classique
+                            (r > 100 && b > 100 && // Seuils plus bas
+                            Math.abs(r - b) < 80 && // Plus de tolérance entre rouge et bleu
+                            g < Math.min(r, b) * 0.95 && // Beaucoup plus de tolérance pour le vert
+                            g < 130) || // Limite plus haute pour le vert
+                            // Cas 2 : Violet foncé
+                            (r > 80 && b > 80 && 
+                            Math.abs(r - b) < 50 && 
+                            g < 80) ||
+                            // Cas 3 : Violet clair
+                            (r > 150 && b > 150 && 
+                            Math.abs(r - b) < 100 && 
+                            g < 150)
+                        );
                     
                     default:
                         return hex === colorHex;
